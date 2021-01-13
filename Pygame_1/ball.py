@@ -58,7 +58,7 @@ class ball(object):
             elif self.lowerCollision():
                 pass
         # [270, 360) degrees
-        elif math.radians(270) <= self.facing <= math.radians(359):
+        elif math.radians(270) <= self.facing <= math.radians(360):
             section = math.radians(270)
             self.x -= int(self.vel * math.cos(self.facing - section))
             self.y -= int(self.vel * math.sin(self.facing - section))
