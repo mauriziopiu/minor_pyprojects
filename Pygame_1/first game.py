@@ -8,7 +8,7 @@ pygame.display.set_caption("Pong")
 clock = pygame.time.Clock()
 
 player = player.player(250, 480)
-ball = ball.ball(350, 250, 30, 20)
+ball = ball.ball(350, 250, 5, 30, 20)
 
 
 def redrawGameWindow():
