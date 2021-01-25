@@ -75,12 +75,12 @@ class Edge(object):
         self.end_node_x = end_node.x
         self.end_node_y = end_node.y
 
-        self.delta_x = self.end_node.x - self.start_node.x
-        self.delta_y = self.end_node.y - self.start_node.y
-        self.hyp = math.sqrt(self.delta_x**2 + self.delta_y**2)
-        self.normalized_dir_vx = self.delta_x // self.hyp
-        self.normalized_dir_vy = self.delta_y // self.hyp
-        self.direction = math.acos(self.delta_y // self.hyp)        # not sure
+        # self.delta_x = self.end_node.x - self.start_node.x
+        # self.delta_y = self.end_node.y - self.start_node.y
+        # self.hyp = math.sqrt(self.delta_x**2 + self.delta_y**2)
+        # self.normalized_dir_vx = self.delta_x // self.hyp
+        # self.normalized_dir_vy = self.delta_y // self.hyp
+        # self.direction = math.acos(self.delta_y // self.hyp)        # not sure
 
         self.color = color
         self.width = width
@@ -132,7 +132,7 @@ def main():
                         end_node = graph.getNodeAt(pos[0], pos[1])
                         graph.addEdge(win, start_node, end_node)
                         nodeStorage.clear()
-                if graph.isEdgeAt(pos[0], pos[1]):
+                elif graph.isEdgeAt(pos[0], pos[1]):
                     pass
                 else:  # Click into space (-> Add Node)
                     graph.addNode(win, pos[0], pos[1])
